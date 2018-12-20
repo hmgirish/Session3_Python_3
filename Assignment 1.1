@@ -1,0 +1,20 @@
+1.1 Write a Python Program to implement your own myreduce() function which works exactly
+like Python's built-in function reduce()
+
+Solution:
+
+Without using reduce function:
+
+data = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29]
+product = 1
+for x in data:
+    product = product * x
+    
+product
+
+Using reduce function:
+
+from functools import reduce
+data = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29]
+product = lambda x, y: x*y
+reduce (product, data)
