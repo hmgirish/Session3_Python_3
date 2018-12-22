@@ -1,0 +1,12 @@
+3. Implement a function longestWord() that takes a list of words and returns the longest one.
+
+Solution:
+
+def longest_word(wlist):
+    wlen = []
+    for n in wlist:
+        wlen.append((len(n), n))
+    wlen.sort()
+    return wlen[-1][1]
+
+print(longest_word(["Python", "Anaconda", "Jupyter"]))
